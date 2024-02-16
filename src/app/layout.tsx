@@ -21,9 +21,9 @@
  */
 
 import type { Metadata } from "next";
-import {Inter, Montserrat} from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -32,13 +32,11 @@ export const metadata: Metadata = {
   description: "Drive To Develop",
 };
 
-interface RootLayoutProps{
+interface RootLayoutProps {
   children: ReactNode;
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<RootLayoutProps>) {
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
       <body className={montserrat.className}>{children}</body>
