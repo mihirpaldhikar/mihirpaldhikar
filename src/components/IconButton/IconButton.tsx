@@ -20,19 +20,25 @@
  * SOFTWARE.
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import { JSX, ReactNode } from "react";
 
-.rotate {
-    animation: rotation 100s infinite linear;
+interface IconButtonProps {
+  icon: ReactNode;
+  text?: string;
 }
 
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
+export default function IconButton({
+  icon,
+  text,
+}: IconButtonProps): JSX.Element {
+  return (
+    <button
+      className={
+        "flex border border-gray-300 rounded-lg p-2 hover:bg-blue-100 transition-colors duration-200"
+      }
+    >
+      {icon}
+      <span hidden={text === null}>{text}</span>
+    </button>
+  );
 }

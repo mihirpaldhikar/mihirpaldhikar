@@ -20,13 +20,55 @@
  * SOFTWARE.
  */
 
+import { TechLogos } from "@components/TechLogos";
+import { Source_Code_Pro } from "next/font/google";
+import { IconButton } from "@components/IconButton";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+
+const sourceCodePro = Source_Code_Pro({ subsets: ["latin"] });
+
 export default function Home() {
   return (
-    <main className={"min-h-screen flex"}>
-      <div className={"m-auto text-center"}>
-        <h1 className={"text-3xl font-black"}>Mihir Paldhikar</h1>
-        <h4 className={"text-lg font-medium"}>Drive To Develop</h4>
+    <div className={"grid md:grid-cols-2 min-h-screen w-full grid-cols-1 "}>
+      <div
+        className={
+          "flex flex-col justify-center pl-5 pr-5 md:pr-0 md:mt-0 mt-[-50px] md:pl-32 md:order-first order-last"
+        }
+      >
+        <span className={"text-xl font-medium mb-2 text-neutral-700"}>
+          I am
+        </span>
+        <h1 className={"text-6xl font-black text-neutral-700"}>
+          <span className={"text-blue-600"}>Mihir</span> Paldhikar
+        </h1>
+        <span
+          className={`${sourceCodePro.className} text-blue-800 font-medium text-lg mt-3`}
+        >
+          Drive To Develop
+        </span>
+
+        <h5
+          className={`${sourceCodePro.className}  font-medium text-lg mt-5 text-neutral-700`}
+        >
+          Creating Scalable solutions with{" "}
+          <span className={"text-blue-800"}>Technology.</span>
+        </h5>
+        <div className={"md:w-[200px] w-full space-y-3 pt-10"}>
+          <div className={"flex space-x-5 w-full pb-3 justify-evenly"}>
+            <IconButton icon={<FaGithub size={35} />} />
+            <IconButton icon={<FaLinkedin size={35} />} />
+            <IconButton icon={<FaXTwitter size={35} />} />
+          </div>
+          <button
+            className={"text-white bg-blue-600 rounded-md px-3 py-2 w-full"}
+          >
+            Résumé
+          </button>
+        </div>
       </div>
-    </main>
+      <div className={"flex flex-col justify-center items-center"}>
+        <TechLogos />
+      </div>
+    </div>
   );
 }
