@@ -27,7 +27,7 @@ export default function Navbar(): JSX.Element {
   return (
     <nav
       className={
-        "fixed z-50 h-16 min-w-full justify-between border-b border-b-gray-300 bg-white/50 px-5 py-3 flex items-center"
+        "fixed z-50 backdrop-blur-md h-16 min-w-full justify-between border-b border-b-gray-300 bg-white/50 px-5 py-3 flex items-center"
       }
     >
       <div>
