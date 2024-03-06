@@ -42,7 +42,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
     <html lang="en">
       <body className={montserrat.className}>
         <Navbar />
-        <main>{children}</main>
+        <main className={"pt-20"}>{children}</main>
       </body>
     </html>
   );
