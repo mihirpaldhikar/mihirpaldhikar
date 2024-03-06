@@ -20,6 +20,4 @@
  * SOFTWARE.
  */
 
-export { TechLogos } from "./TechLogos";
-export { IconButton } from "./IconButton";
-export { Footer } from "./Footer";
+export { default as Footer } from "./Footer";

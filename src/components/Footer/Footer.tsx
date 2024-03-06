@@ -20,6 +20,19 @@
  * SOFTWARE.
  */
 
-export { TechLogos } from "./TechLogos";
-export { IconButton } from "./IconButton";
-export { Footer } from "./Footer";
+export default function Footer(): JSX.Element {
+  return (
+    <footer
+      className={
+        "border-t border-t-gray-300 flex items-center py-5 justify-center space-y-5 flex-col"
+      }
+    >
+      <span className={"text-xs font-medium text-gray-400"}>
+        Mihir Paldhikar &copy; 2024
+      </span>
+      <span className={"text-xs font-medium text-gray-300"}>
+        Website is under construction. 🚧🛠️
+      </span>
+    </footer>
+  );
+}
