@@ -20,30 +20,8 @@
  * SOFTWARE.
  */
 
-import { JSX, ReactNode } from "react";
-import Link from "next/link";
+import { JSX } from "react";
 
-interface IconButtonProps {
-  icon: ReactNode;
-  link: string;
-  text?: string;
-}
-
-export default function IconButton({
-  icon,
-  link,
-  text,
-}: IconButtonProps): JSX.Element {
-  return (
-    <Link
-      href={link}
-      target={"_blank"}
-      className={
-        "flex border border-gray-300 rounded-lg p-2 hover:bg-blue-100 transition-colors duration-200"
-      }
-    >
-      {icon}
-      <span hidden={text === null}>{text}</span>
-    </Link>
-  );
+export default function Navbar(): JSX.Element {
+  return <nav></nav>;
 }

@@ -55,15 +55,19 @@ export default function Home() {
         </h5>
         <div className={"md:w-[200px] w-full space-y-3 pt-10"}>
           <div className={"flex space-x-5 w-full pb-3 justify-evenly"}>
-            <IconButton icon={<FaGithub size={35} />} />
-            <IconButton icon={<FaLinkedin size={35} />} />
-            <IconButton icon={<FaXTwitter size={35} />} />
+            <IconButton
+              link={"https://github.com/mihirpaldhikar"}
+              icon={<FaGithub size={35} />}
+            />
+            <IconButton
+              link={"https://www.linkedin.com/in/mihirpaldhikar/"}
+              icon={<FaLinkedin size={35} />}
+            />
+            <IconButton
+              link={"https://twitter.com/mihirpaldhikar"}
+              icon={<FaXTwitter size={35} />}
+            />
           </div>
-          <button
-            className={"text-white bg-blue-600 rounded-md px-3 py-2 w-full"}
-          >
-            Résumé
-          </button>
         </div>
       </div>
       <div className={"flex flex-col justify-center items-center"}>
